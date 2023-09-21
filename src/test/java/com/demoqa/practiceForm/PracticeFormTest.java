@@ -5,6 +5,7 @@ import com.demoqa.configuration.browserSettings;
 import demoqa.practiceForm.PracticeFormPage;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import org.testng.asserts.Assertion;
 
 public class PracticeFormTest implements browserSettings {
     PracticeFormPage practiceFormPage = new PracticeFormPage();
@@ -15,7 +16,7 @@ public class PracticeFormTest implements browserSettings {
 }
 @Test
 
-    void practiceFormTest(){
+    void practiceFormSmokeTest(){
     practiceFormPage.setFirstName();
     practiceFormPage.setLastName();
     practiceFormPage.setEmail();
@@ -26,11 +27,12 @@ public class PracticeFormTest implements browserSettings {
     practiceFormPage.setSubjects();
     practiceFormPage.pressMusicHobbyCheckBox();
     practiceFormPage.pressReadingHobbyCheckBox();
-    practiceFormPage.setFile();   //Unable to locate element !
+    practiceFormPage.setFile();
     practiceFormPage.setCurrentAddress();
     practiceFormPage.setState();
     practiceFormPage.setCity();
     practiceFormPage.pressSubmitButton();
+
 
 }
 }
