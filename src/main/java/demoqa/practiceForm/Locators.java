@@ -1,6 +1,8 @@
 package demoqa.practiceForm;
+
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -43,6 +45,11 @@ public class Locators {
     private final SelenideElement stateAndCityResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'State and City')]/td[2]");
     private final SelenideElement genderResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Gender')]/td[2]");
     private final SelenideElement hobbiesResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Hobbies')]/td[2]");
+    private final SelenideElement appreciationForFillingOutTheForm = $x("//div[@id= 'example-modal-sizes-title-lg' and text() = 'Thanks for submitting the form']");
+
+    public SelenideElement getAppreciationForFillingOutTheForm() {
+        return appreciationForFillingOutTheForm;
+    }
 
     public SelenideElement getStudentResultNameFieldValue() {
         return studentResultNameFieldValue;

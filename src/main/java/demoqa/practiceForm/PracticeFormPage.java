@@ -1,7 +1,10 @@
 package demoqa.practiceForm;
+
 import com.codeborne.selenide.*;
 import org.openqa.selenium.Keys;
+
 import java.io.File;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class PracticeFormPage extends Locators {
@@ -18,7 +21,19 @@ public class PracticeFormPage extends Locators {
     File file = new File("src/main/resources/TextPicture.jpg");
     private final String textPicture = "Textpicture.jpg";
     private final String testMonth = "April";
+    private final String expectedResultForGender = "Male";
+    private final String expectedResultForHobbies = "Reading, Music";
 
+
+    //Test logic
+
+    public String getExpectedResultForGender() {
+        return expectedResultForGender;
+    }
+
+    public String getExpectedResultForHobbies() {
+        return expectedResultForHobbies;
+    }
 
     public String getPracticeUrl() {
         return practiceUrl;
@@ -149,6 +164,34 @@ public class PracticeFormPage extends Locators {
 
     public void pressSubmitButton() {
         getSubmitButton().click(ClickOptions.usingJavaScript());
+    }
+
+    public String getExpectedFirstNameAndLastName() {
+        String firstName = getFirstName();
+        String lastName = getLastName();
+        return firstName + " " + lastName;
+    }
+
+    public String getActualFirstNameAndLastName() {
+        return getStudentResultNameFieldValue().getText();
+    }
+    public String getExpectedEmail() {
+        return getEmail();
+    }
+    public String getActualEmail() {
+        return getStudentResultEmailFieldValue().getText();
+    }
+    public String getExpectedGender() {
+        return getExpectedResultForGender();
+    }
+    public String getActualGender() {
+        return getGenderResultFieldValue().getText();
+    }
+    public String getExpectedMobile() {
+        return getMobileNumber();
+    }
+    public String getActualMobile() {
+        return getMobileResultFieldValue().getText();
     }
 
 }
