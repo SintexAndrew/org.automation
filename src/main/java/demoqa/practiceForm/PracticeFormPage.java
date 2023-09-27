@@ -16,9 +16,33 @@ public class PracticeFormPage extends Locators {
     private final String state = "NCR";
     private final String city = "Delhi";
     File file = new File("src/main/resources/TextPicture.jpg");
-    private final String textPicture = "Textpicture.jpg";
+    private final String textPicture = "TextPicture.jpg";
     private final String testMonth = "April";
+    private final String expectedResultForGender = "Male";
+    private final String expectedResultForHobbies = "Music, Reading";
+    private final String expectedTestDate = "15 April,2023";
 
+
+    public String getTestMonth() {
+        return testMonth;
+    }
+
+    public String getExpectedTestDate() {
+        return expectedTestDate;
+    }
+
+    public String getTextPicture() {
+        return textPicture;
+    }
+    //Test logic
+
+    public String getExpectedResultForGender() {
+        return expectedResultForGender;
+    }
+
+    public String getExpectedResultForHobbies() {
+        return expectedResultForHobbies;
+    }
 
     public String getPracticeUrl() {
         return practiceUrl;
@@ -151,4 +175,67 @@ public class PracticeFormPage extends Locators {
         getSubmitButton().click(ClickOptions.usingJavaScript());
     }
 
+    public String getExpectedFirstNameAndLastName() {
+        String firstName = getFirstName();
+        String lastName = getLastName();
+        return firstName + " " + lastName;
+    }
+
+    public String getActualFirstNameAndLastName() {
+        return getStudentResultNameFieldValue().getText();
+    }
+    public String getExpectedEmail() {
+        return getEmail();
+    }
+    public String getActualEmail() {
+        return getStudentResultEmailFieldValue().getText();
+    }
+    public String getExpectedGender() {
+        return getExpectedResultForGender();
+    }
+    public String getActualGender() {
+        return getGenderResultFieldValue().getText();
+    }
+    public String getExpectedMobile() {
+        return getMobileNumber();
+    }
+    public String getActualMobile() {
+        return getMobileResultFieldValue().getText();
+    }
+    public String getExpectedDate() {
+        return getExpectedTestDate();
+    }
+    public String getActualDate() {
+        return getDateResultFieldValue().getText();
+    }
+    public String getExpectedSubjects() {
+        return getSubjects();
+    }
+    public String getActualSubjects() {
+        return getSubjectResultFieldValue().getText();
+    }
+    public String getExpectedHobbies() {
+        return getExpectedResultForHobbies();
+    }
+    public String getActualHobbies() {
+        return getHobbiesResultFieldValue().getText();
+    }
+    public String getExpectedPicture() {
+        return getTextPicture();
+    }
+    public String getActualPicture() {
+        return getPictureResultFieldValue().getText();
+    }
+    public String getExpectedAddress() {
+        return getCurrentAddress();
+    }
+    public String getActualAddress() {
+        return getAddressResultFieldValue().getText();
+    }
+    public String getExpectedStateAndCity() {
+        return getState() + " " + getCity();
+    }
+    public String getActualStateAndCity() {
+        return getStateAndCityResultFieldValue().getText();
+    }
 }

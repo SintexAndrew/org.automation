@@ -34,6 +34,61 @@ public class Locators {
     private final SelenideElement citySelect = $(By.id("react-select-4-input"));
     private final SelenideElement stateSelect = $(By.id("react-select-3-input"));
     private final SelenideElement submitButton = $(By.id("submit"));
+    private final SelenideElement studentResultNameFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Student Name')]/td[2]");
+    private final SelenideElement studentResultEmailFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Student Email')]/td[2]");
+    private final SelenideElement mobileResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Mobile')]/td[2]");
+    private final SelenideElement dateResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Date of Birth')]/td[2]");
+    private final SelenideElement subjectResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Subjects')]/td[2]");
+    private final SelenideElement pictureResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Picture')]/td[2]");
+    private final SelenideElement addressResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Address')]/td[2]");
+    private final SelenideElement stateAndCityResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'State and City')]/td[2]");
+    private final SelenideElement genderResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Gender')]/td[2]");
+    private final SelenideElement hobbiesResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Hobbies')]/td[2]");
+    private final SelenideElement appreciationForFillingOutTheForm = $x("//div[@id= 'example-modal-sizes-title-lg' and text() = 'Thanks for submitting the form']");
+
+    public SelenideElement getDateResultFieldValue() {
+        return dateResultFieldValue;
+    }
+
+    public SelenideElement getAppreciationForFillingOutTheForm() {
+        return appreciationForFillingOutTheForm;
+    }
+
+    public SelenideElement getStudentResultNameFieldValue() {
+        return studentResultNameFieldValue;
+    }
+
+    public SelenideElement getStudentResultEmailFieldValue() {
+        return studentResultEmailFieldValue;
+    }
+
+    public SelenideElement getMobileResultFieldValue() {
+        return mobileResultFieldValue;
+    }
+
+    public SelenideElement getSubjectResultFieldValue() {
+        return subjectResultFieldValue;
+    }
+
+    public SelenideElement getPictureResultFieldValue() {
+        return pictureResultFieldValue;
+    }
+
+    public SelenideElement getAddressResultFieldValue() {
+        return addressResultFieldValue;
+    }
+
+    public SelenideElement getStateAndCityResultFieldValue() {
+        return stateAndCityResultFieldValue;
+    }
+
+    public SelenideElement getGenderResultFieldValue() {
+        return genderResultFieldValue;
+    }
+
+    public SelenideElement getHobbiesResultFieldValue() {
+        return hobbiesResultFieldValue;
+    }
 
     public SelenideElement getSubmitButton() {
         return submitButton;
