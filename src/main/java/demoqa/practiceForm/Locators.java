@@ -1,8 +1,6 @@
 package demoqa.practiceForm;
-
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -39,6 +37,7 @@ public class Locators {
     private final SelenideElement studentResultNameFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Student Name')]/td[2]");
     private final SelenideElement studentResultEmailFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Student Email')]/td[2]");
     private final SelenideElement mobileResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Mobile')]/td[2]");
+    private final SelenideElement dateResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Date of Birth')]/td[2]");
     private final SelenideElement subjectResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Subjects')]/td[2]");
     private final SelenideElement pictureResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Picture')]/td[2]");
     private final SelenideElement addressResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Address')]/td[2]");
@@ -46,6 +45,10 @@ public class Locators {
     private final SelenideElement genderResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Gender')]/td[2]");
     private final SelenideElement hobbiesResultFieldValue = $x("//table[@class = 'table table-dark table-striped table-bordered table-hover']//tr[contains(td, 'Hobbies')]/td[2]");
     private final SelenideElement appreciationForFillingOutTheForm = $x("//div[@id= 'example-modal-sizes-title-lg' and text() = 'Thanks for submitting the form']");
+
+    public SelenideElement getDateResultFieldValue() {
+        return dateResultFieldValue;
+    }
 
     public SelenideElement getAppreciationForFillingOutTheForm() {
         return appreciationForFillingOutTheForm;
