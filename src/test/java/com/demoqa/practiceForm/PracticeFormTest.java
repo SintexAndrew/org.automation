@@ -71,11 +71,11 @@ public class PracticeFormTest implements browserSettings {
     }
     @Test(dependsOnMethods = "practiceFormSmokeTest")
     void validationOfAdress(){
-        Assert.assertEquals(practiceFormPage.getActualAddress(),practiceFormPage.getExpectedAddress(),"Actual and expected picture are not equal.");
+        Assert.assertEquals(practiceFormPage.getActualAddress(),practiceFormPage.getExpectedAddress(),"Actual and expected Address is not equal.");
     }
     @Test(dependsOnMethods = "practiceFormSmokeTest")
     void validationOfStateAndCity(){
-        Assert.assertEquals(practiceFormPage.getActualStateAndCity(),practiceFormPage.getExpectedStateAndCity(),"Actual and expected picture are not equal.");
+        Assert.assertEquals(practiceFormPage.getActualStateAndCity(),practiceFormPage.getExpectedStateAndCity(),"Actual and expected State and city are not equal.");
     }
 
 }
